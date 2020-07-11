@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/wubowen2018/JSFileTools#readme",
   "devDependencies": {
+    "chalk": "^4.1.0",
     "nodemon": "^2.0.4"
   }
 }

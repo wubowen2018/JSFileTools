@@ -1,3 +1,5 @@
+const chalk = require('chalk')
+var { adjustPath,log,logWarning,logErr } = require('../lib/util')
 const {mkdir,rmdir,touch,remove,copy,cut} = require("../index")
 var fs = require('fs')
 
@@ -6,12 +8,13 @@ var fs = require('fs')
 // mkdir("./test/temp/cc")
 // remove("./bb.txt")
 
-rmdir("./cc")
+// rmdir("./cc")
 
 // copy("./test/temp/", ".")
 // remove("./test/temp/aa/bb.txt")
 // rmdir("./test/temp")
 // cut('./test/temp','.')
+
 
 
 
