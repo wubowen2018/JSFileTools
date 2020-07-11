@@ -1,6 +1,7 @@
 {
     "watch":[
         "./index.js",
-        "lib/*"
+        "lib/*",
+        "test/*"
     ]
 }
