@@ -6,10 +6,12 @@ var fs = require('fs')
 // mkdir("./test/temp/cc")
 // remove("./bb.txt")
 
-// rmdir("./test/temp")
+rmdir("./cc")
+
 // copy("./test/temp/", ".")
 // remove("./test/temp/aa/bb.txt")
 // rmdir("./test/temp")
+// cut('./test/temp','.')
 
 
 
