@@ -1,0 +1,32 @@
+{
+  "name": "jsfiletools",
+  "version": "1.0.0",
+  "description": "some fs tools",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc",
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wubowen2018/JSFileTools.git"
+  },
+  "keywords": [
+    "fs",
+    "tool"
+  ],
+  "author": "jeremy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wubowen2018/JSFileTools/issues"
+  },
+  "homepage": "https://github.com/wubowen2018/JSFileTools#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
