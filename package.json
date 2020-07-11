@@ -17,8 +17,8 @@
     "url": "git+https://github.com/wubowen2018/JSFileTools.git"
   },
   "keywords": [
-    "fs",
-    "tool"
+    "fs tools",
+    "Node.js"
   ],
   "author": "jeremy",
   "license": "ISC",
