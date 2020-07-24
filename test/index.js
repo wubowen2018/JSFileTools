@@ -25,6 +25,11 @@ console.log('===============================');
 // var aa = str.match(/\/([^\/]+)$/g)[0]
 // console.log(aa);
 
+var str = "aaaabbbbbcc"
+var reg = /(\w)\1*/g
+var temp = str.replace(reg,"$1")
+console.log(temp);  
+
 
 
 
