@@ -27,21 +27,11 @@ function Person() {
     }
 }
 
-<<<<<<< HEAD
 var str = "aaaabbbbbcc"
 var reg = /(\w)\1*/g
 var temp = str.replace(reg,"$1")
 console.log(temp);  
 
-=======
-Person.prototype.name='sunny'
-Person.prototype.height = 100
-var person = new Person()
-
-person.eat()
-
-console.log(person.__proto__); 
->>>>>>> 132df7d9f9e132bbe22bc9491b9300a5c72c9759
 
 
 
