@@ -21,16 +21,26 @@ var fs = require('fs')
 
 console.log('===============================');
 
-function Person() {
-    this.eat = function (){
-        this.height ++
-    }
-}
 
-var str = "aaaabbbbbcc"
-var reg = /(\w)\1*/g
-var temp = str.replace(reg,"$1")
-console.log(temp);  
+
+// var str = "aaaabbbbbcc"
+// var reg = /(\w)\1*/g
+// var temp = str.replace(reg,"$1")
+// console.log(temp);  
+
+let mSet = new Set(["jimmy","Jeremy","jim"])
+mSet.add("wubowen");
+console.log(mSet);
+
+mSet.delete("jim");
+console.log(mSet);
+console.log(mSet.size);
+
+let str = "hello wobowen"
+for (let index = 0; index < str.length; index++) {
+    !(str[index] == " ") && mSet.add(str[index])  
+}
+console.log(mSet);
 
 
 
