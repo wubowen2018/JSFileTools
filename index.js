@@ -4,6 +4,7 @@ var touch = require('./lib/touch')
 var remove = require('./lib/remove')
 var copy = require('./lib/copy')
 var cut = require('./lib/cut')
+//require('./module/*.js')
 
 module.exports={
     mkdir,
