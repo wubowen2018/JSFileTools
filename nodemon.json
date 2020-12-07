@@ -2,6 +2,7 @@
     "watch":[
         "./index.js",
         "lib/*",
-        "test/*"
+        "test/*",
+        "util/*"
     ]
 }

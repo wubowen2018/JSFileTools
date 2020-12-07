@@ -5,9 +5,37 @@ function adjustPath(pathStr) {
         console.log(chalk.red(`ERR-- param ${pathStr} must be a relative path string. eg:'./hello/world'`));
     }
 }
-const log = content => console.log(chalk.green(`LOG-- ${content}`))
-const logWarning = content => console.log(chalk.yellowBright(`WARN-- ${content}`))
-const logErr = content => console.log(chalk.red(`ERR-- ${content}`))
+const log = content => console.log(chalk.whiteBright(`LOG-- ${content}`))
+const logWarning = content => console.log(chalk.yellowBright(`WARN---- ${content}`))
+const logTime = content => console.log(chalk.red(`TIME-- ${content}`))
+
+
+/**
+ * Show plural label if time is plural number
+ * @param {number} time
+ * @param {string} label
+ * @return {string}
+ */
+function pluralize(time, label) {
+    if (time === 1) {
+      return time + label
+    }
+    return time + label + 's'
+}
+  
+  /**
+   * @param {number} time
+   */
+function timeAgo(time) {
+    const between = Date.now() / 1000 - Number(time)
+    if (between < 3600) {
+      return pluralize(~~(between / 60), ' minute')
+    } else if (between < 86400) {
+      return pluralize(~~(between / 3600), ' hour')
+    } else {
+      return pluralize(~~(between / 86400), ' day')
+    }
+}
 
 /*
     123456.15 -> 123,456.15
@@ -49,9 +77,10 @@ function numberFormatter(num, digits) {
 module.exports = {
     adjustPath,
     numberFormatter,
+    timeAgo,
     uppercaseFirst,
     toThousandFilter,
     log,
     logWarning,
-    logErr
+    logTime
 }
