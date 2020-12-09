@@ -16,7 +16,7 @@ var fs = require('fs')
 // cut('./test/temp','.')
 
 console.log('===============================');
-logTime(new Date().toString().match(/([\d]{2}:){2}[\d]{2}/g))
+logTime(new Date().toString().match(/(\d\d:){2}\d{2}/g))
 // var str = "aaaabbbbbcc"
 // var reg = /(\w)\1*/g
 // var temp = str.replace(reg,"$1")
