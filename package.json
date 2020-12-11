@@ -10,7 +10,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./test/index.js"
+    "start": "nodemon .index.js"
   },
   "repository": {
     "type": "git",
@@ -31,6 +31,7 @@
     "nodemon": "^2.0.4"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "log4js": "^6.3.0"
   }
