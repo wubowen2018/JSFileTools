@@ -1,14 +1,16 @@
 const chalk = require('chalk')
 
+
+
+const log = content => console.log(chalk.whiteBright(`-- ${content}`))
+const logWarning = content => console.log(chalk.yellowBright(`WARN---- ${content}`))
+const logTime = content => console.log(chalk.red(`TIME-- ${content}`))
+
 function adjustPath(pathStr) {
     if (pathStr != '.') {
         console.log(chalk.red(`ERR-- param ${pathStr} must be a relative path string. eg:'./hello/world'`));
     }
 }
-const log = content => console.log(chalk.whiteBright(`LOG-- ${content}`))
-const logWarning = content => console.log(chalk.yellowBright(`WARN---- ${content}`))
-const logTime = content => console.log(chalk.red(`TIME-- ${content}`))
-
 
 /**
  * Show plural label if time is plural number

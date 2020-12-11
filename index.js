@@ -1,9 +1,11 @@
-let { logWarning, logTime, log } = require('./util')
 let express = require('express')
+let { logWarning, logTime, log } = require('./util')
+
+let log4js = require('log4js');
+let logger = require("./config/log4js").getLogger("index.js"); //表示这个日志来着于 index.js文件
 
 //cors 跨域
 let cors = require('cors')
-
 
 let app = express()
 
@@ -14,6 +16,25 @@ var corsOptions = {
     origin: '*',
     optionsSuccessStatus: 200
 }
+
+// 一个简单的 logger
+// app.use(function (req, res, next) {
+//     log('%s %s', req.method, req.url);
+//     next();
+// });
+
+ //http请求日志，输出的等级为trace
+app.use(log4js.connectLogger(log4js.getLogger("http"), { level: 'trace' }));
+
+//在其他地方使用
+// var logger = require("./lib/logger").getLogger("other.js");
+// //logger.level = 'error';      //可以不设置，不设置就使用之前配置的default里面的等级
+// logger.debug("debug---asdasdasd");
+// logger.info("info--sadadasd");
+// logger.error("error--sadadasd");
+// logger.error("error--sadadasd");
+// logger.fatal("fatel--sadadasd");
+// logger.trace("trace--sadadasd");
 
 //利用中间件实现跨域
 app.use('*', function (req, res, next) {
