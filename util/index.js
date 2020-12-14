@@ -57,7 +57,26 @@ function uppercaseFirst(string) {
     return string.charAt(0).toUpperCase() + string.slice(1)
 }
 
+/**
+ * 将对象数组按照某个属性的值升序排列
+ * @param {Array} arr 
+ * @param {String} key 
+ * @return {Array} 
+ */
+let sortby = function (arr, key) {
+    return arr.sort(function (a, b) {
+        var a1 = a[key];
+        var b1 = b[key];
+        return (a1 - b1);
+    });
+};
 
+/**
+ * 格式化数字，比如 1000 -> 1k
+ * 返回字符串
+ * @param {Number} num 
+ * @param {String} digits 
+ */
 function numberFormatter(num, digits) {
     const si = [
         { value: 1E18, symbol: 'E' },
@@ -83,6 +102,7 @@ module.exports = {
     uppercaseFirst,
     toThousandFilter,
     log,
+    sortby,
     logWarning,
     logTime
 }
